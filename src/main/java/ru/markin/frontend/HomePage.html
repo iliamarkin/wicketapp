@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Wicket example</title>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet'
+          type='text/css'/>
+    <link rel="stylesheet" media="screen" title="Stylesheet"/>
+</head>
+<body>
+<div wicket:id="container">
+    <fieldset>
+        <table border="1">
+            <legend>Users</legend>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Birthday date</th>
+            </tr>
+            <tr wicket:id="users">
+                <td>
+                    <div wicket:id="userId"></div>
+                </td>
+                <td>
+                    <div wicket:id="userName"></div>
+                </td>
+                <td>
+                    <div wicket:id="userSurname"></div>
+                </td>
+                <td>
+                    <div wicket:id="userBirthdayDate"></div>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <form wicket:id="userForm">
+        <input wicket:id="userNameInput" type="text"/>
+        <input wicket:id="userSurnameInput" type="text"/>
+        <input wicket:id="userBirthdayDateInput" type="text"/>
+        <input wicket:id="addButton" type="button" wicket:message="value:button.add"/>
+    </form>
+</div>
+</body>
+</html>

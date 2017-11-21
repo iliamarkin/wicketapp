@@ -1,0 +1,37 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="USER_TAB: create table 19112017" author="imarkin">
+        <createTable tableName="USER_TAB">
+            <column name="id" type="integer">
+                <constraints primaryKey="true" primaryKeyName="USER_TAB_PK"/>
+            </column>
+            <column name="name" type="varchar2(32 char)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="varchar2(32 char)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birthday_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="USER_TAB: create index 19112017" author="imarkin">
+        <createIndex tableName="USER_TAB" indexName="NAME_SURNAME_IDX">
+            <column name="NAME"/>
+            <column name="SURNAME"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="USER_TAB: create sequence 19112017" author="imarkin">
+        <createSequence sequenceName="USER_TAB_ID_SEQ"
+                        startValue="1"
+                        incrementBy="1"/>
+    </changeSet>
+
+</databaseChangeLog>
