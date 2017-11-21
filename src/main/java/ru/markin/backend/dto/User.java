@@ -25,7 +25,7 @@ public class User implements Serializable {
         return name;
     }
 
-    public void setName(@Nonnull final String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
@@ -33,7 +33,7 @@ public class User implements Serializable {
         return surname;
     }
 
-    public void setSurname(@Nonnull final String surname) {
+    public void setSurname(final String surname) {
         this.surname = surname;
     }
 
@@ -41,7 +41,7 @@ public class User implements Serializable {
         return birthdayDate;
     }
 
-    public void setBirthdayDate(@Nonnull final Date birthdayDate) {
+    public void setBirthdayDate(final Date birthdayDate) {
         this.birthdayDate = birthdayDate;
     }
 
